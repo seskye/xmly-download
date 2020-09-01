@@ -14,4 +14,4 @@ https://www.52pojie.cn/thread-1255513-1-1.html
 4. 运行 `python download.py`
 
 
-ps:如果是付费资源，需要扫码登录vip用户才能下载
+ps:非破解，需要登录具有对应权限的账号下载
