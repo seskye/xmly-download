@@ -10,7 +10,7 @@ from login import login
 session = login()
 # session = requests.session()
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36"}
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"}
 
 
 # http://audiofreepay.xmcdn.com 为不能用
@@ -112,7 +112,8 @@ class XiMaLaYa(object):
                 print(Exception)
                 print(url)
                 print(res)
-        if url == '':
+        if url == '' or url is None:
+            print("收费资源，未能获取到下载url")
             return
         t = Thread(target=self.download_m4a, args=(url, title))
         t.start()
@@ -150,4 +151,4 @@ if __name__ == '__main__':
     # ximalaya = XiMaLaYa(22630007) #平凡的世界 | 路遥代表作，杨晨、张震演播
     # ximalaya = XiMaLaYa(7769841) #毛泽东与蒋介石
     # ximalaya = XiMaLaYa(35772167) #鬼吹灯 第二部 5-8卷丨周建龙（黄皮子坟等4本合集）
-    ximalaya = XiMaLaYa(15745662)  # 马东
+    ximalaya = XiMaLaYa(24495603)  # 马东
